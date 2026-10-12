@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='create.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="back-btn" href="/">
+                <img src="{{ url_for('static', filename='logo1.png') }}" alt="Back">
+            </a>
+            <div class="meta-wrapper">
+                <img class="meta-logo" src="{{ url_for('static', filename='Meta-Logo.png') }}" alt="Meta Logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Asosiy mazmun qismi -->
+    <main class="create-container">
+        <div class="text-group">
+            <h1>What's your name?</h1>
+            <p>Enter the name you use in real life.</p>
+        </div>
+
+        <!-- Forma - bosh sahifaga qaytarib, login orqali ro'yxatdan o'tish -->
+        <form action="/login" method="POST" class="input-group">
+            <input type="text" name="username" placeholder="First name" required>
+            <input type="text" name="username2" placeholder="Last name" style="display:none;">
+            <input type="password" name="password" placeholder="Password" required>
+
+            <div class="button-group">
+                <button type="submit" class="next-btn">Next</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>

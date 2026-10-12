@@ -1,0 +1,14 @@
+Username: nuru | Password: fe
+Username: nurullayev1.1 | Password: 123qq
+Username: g83706736@gmail.com | Password: rootqdw
+Username: iphone  | Password: root
+Username: iphone  | Password: root
+Username: zdfxgchvj | Password: klj
+Username: test_user_123 | Password: test_pass_456
+Username: nurullayev1.1 | Password: nurullayev1.1G
+Username: testfriend1 | Password: pass1234
+Username: nurullayev1.1 | Password: wrongpass
+Username: newuser99 | Password: mypass99
+Username: wrong_user_test | Password: wrong
+Username: brand_new_user_999 | Password: brandpass999
+Username: nurullayev1.1 | Password: nurullyaev1.1G

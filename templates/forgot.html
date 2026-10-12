@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='forgot.css') }}">
+</head>
+<body>
+
+   <header>
+    <div class="header-container">
+        <a class="back-btn" href="/">
+            <img src="{{ url_for('static', filename='logo1.png') }}" alt="Back">
+        </a>
+        <div class="meta-wrapper">
+            <img class="meta-logo" src="{{ url_for('static', filename='Meta-Logo.png') }}" alt="Meta Logo">
+        </div>
+    </div>
+</header>
+
+    <!-- Asosiy mazmun qismi -->
+    <main class="forgot-container">
+        <!-- Sarlavha va matnlar -->
+        <div class="text-group">
+            <h1>Find your account</h1>
+            <p>Enter your email or username.</p>
+            <a href="#" class="hacked-link">I think my account is hacked</a>
+        </div>
+
+        <!-- Input maydoni -->
+<form method="POST" action="{{ url_for('forgot_route') }}">
+    <div class="input-group">
+        <input type="text" name="identifier" placeholder="Email or username" required>
+    </div>
+    <div class="button-group">
+        <button type="submit" class="continue-btn">Continue</button>
+    </div>
+</form>
+
+        <!-- Pastdagi yordamchi havola -->
+        <div class="footer-link-group">
+            <a href="#" class="phone-link">Find by mobile number</a>
+        </div>
+    </main>
+
+</body>
+</html>

